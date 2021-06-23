@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+
+public class SwanEggs {
+	
+	public static void main(String[] args){
+	
+		 int total_no_of_eggs = 0;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter total number of swans:");
+		int s= sc.nextInt(); 
+		System.out.println("Age in weeks of each swan:");
+		for(int i=0;i<s;i++){
+		int A=sc.nextInt();
+		int array[]=new int[100];
+		int q=0;
+		array[q]=A;
+		
+		if(array[q]>52)
+		{
+			total_no_of_eggs=total_no_of_eggs+16;
+		}
+		else
+		{
+			int rem_weeks = 4 - (52-array[q]);
+			if(rem_weeks >= 0)
+                total_no_of_eggs = total_no_of_eggs + (rem_weeks * 4);
+			else
+			{
+				System.out.println("error");
+				break;
+			}
+			
+		}
+		
+		}
+		System.out.println("Total eggs in a month:"+total_no_of_eggs);
+		
+		
+	}
+}
